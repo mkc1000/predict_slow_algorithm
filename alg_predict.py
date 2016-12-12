@@ -145,6 +145,7 @@ class PredictSlowAlgorithm(object):
                 break
         inc = psa.alg_object_q.get_nowait()
         psa.join_method()
+        return inc
 
 class Increment(object):
     def __init__(self):
@@ -160,4 +161,4 @@ class Increment(object):
 if __name__ == '__main__':
     inc = Increment()
     psa = PredictSlowAlgorithm(inc, 'increment', ['parameter1', 'parameter2'])
-    psa.run_algorithm_with_predictions(25, 3, 8, 15)
+    inc = psa.run_algorithm_with_predictions(25, 3, 8, 15)
