@@ -22,4 +22,4 @@ The following code would iteratively run the increment method, tracking the para
 
     inc = Increment()
     psa = PredictSlowAlgorithm(inc, 'increment', ['parameter1', 'parameter2'])
-    psa.run_algorithm_with_predictions(max_iter=25, len_hist_used=3, n_steps_future=8, wait_to_model=15)
+    inc = psa.run_algorithm_with_predictions(max_iter=25, len_hist_used=3, n_steps_future=8, wait_to_model=15)
